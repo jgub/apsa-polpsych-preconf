@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#102A43"/>
+  <circle cx="1030" cy="120" r="220" fill="#243B53"/>
+  <circle cx="1040" cy="140" r="170" fill="#334E68" fill-opacity="0.65"/>
+  <circle cx="180" cy="520" r="220" fill="#243B53"/>
+  <circle cx="140" cy="560" r="150" fill="#486581" fill-opacity="0.45"/>
+  <rect x="72" y="64" width="1056" height="502" rx="28" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12"/>
+  <text x="96" y="128" fill="#9FB3C8" font-family="Georgia, serif" font-size="24" font-weight="700" letter-spacing="3.2">2026 APSA POLITICAL PSYCHOLOGY PRE-CONFERENCE</text>
+  <text x="96" y="220" fill="#F0F4F8" font-family="Georgia, serif" font-size="56" font-weight="700">
+    <tspan x="96" dy="0">Political Psychology Across</tspan>
+    <tspan x="96" dy="68">the Discipline</tspan>
+  </text>
+  <text x="96" y="376" fill="#D9E2EC" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">
+    <tspan x="96" dy="0">New Theory, Methods, Measures, and Applications</tspan>
+  </text>
+  <rect x="96" y="438" width="238" height="78" rx="18" fill="#243B53"/>
+  <text x="122" y="470" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2.4">DATE</text>
+  <text x="122" y="500" fill="#F0F4F8" font-family="Georgia, serif" font-size="28" font-weight="700">September 2, 2026</text>
+  <rect x="356" y="438" width="238" height="78" rx="18" fill="#243B53"/>
+  <text x="382" y="470" fill="#9FB3C8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2.4">LOCATION</text>
+  <text x="382" y="500" fill="#F0F4F8" font-family="Georgia, serif" font-size="28" font-weight="700">Harvard University</text>
+  <text x="96" y="564" fill="#BCCCDC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="500">Registration and abstract submission now open</text>
+</svg>

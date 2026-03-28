@@ -13,6 +13,8 @@ export type DeadlineItem = {
 export const conference = {
   title: "2026 APSA Political Psychology Pre-Conference",
   shortTitle: "APSA Pol Psych 2026",
+  siteUrl: "https://apsa-polpsych-preconf.org",
+  socialImagePath: "/social-preview.png",
   theme: "Political Psychology Across the Discipline: New Theory, Methods, Measures, and Applications",
   location: "Harvard University",
   dateLabel: "September 2, 2026",

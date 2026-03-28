@@ -1,0 +1,19 @@
+---
+interface Props {
+  class?: string;
+}
+
+const className = Astro.props.class || "";
+---
+
+<a class:list={["email-link", className]}></a>
+
+<script>
+  const u = "jgub";
+  const d = "byu.edu";
+  const addr = `${u}@${d}`;
+  document.querySelectorAll(".email-link").forEach((el) => {
+    el.setAttribute("href", `mailto:${addr}`);
+    el.textContent = addr;
+  });
+</script>

@@ -1,0 +1,86 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import { conference } from "../data/conference";
+
+const links = [
+  { href: "/#overview", label: "Overview" },
+  { href: "/#schedule", label: "Schedule" },
+  { href: "/#attend", label: "Attend" },
+];
+---
+
+<header class="border-b border-navy-100 bg-surface-alpha backdrop-blur-sm sticky top-0 z-50">
+  <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center">
+    <a href="/" class="font-serif text-xl font-semibold text-navy-900 hover:text-navy-700 transition-colors mr-auto">
+      {conference.shortTitle}
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-8 mr-4">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="text-sm font-medium text-navy-500 hover:text-navy-800 transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a
+      href={conference.signupUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hidden md:inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-surface transition-colors hover:bg-accent-hover mr-3"
+    >
+      Conference Registration Form
+    </a>
+    <ThemeToggle />
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden p-2 text-navy-600 hover:text-navy-900"
+      aria-label="Toggle menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-navy-100">
+    <ul class="px-6 py-4 space-y-3">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="block text-sm font-medium text-navy-500 hover:text-navy-800 transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a
+          href={conference.signupUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-surface transition-colors hover:bg-accent-hover"
+        >
+          Conference Registration Form
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>

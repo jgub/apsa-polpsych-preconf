@@ -1,0 +1,223 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { conference } from "../data/conference";
+---
+
+<BaseLayout
+  title={`${conference.title} | Harvard University`}
+  description="Conference information for the 2026 APSA Political Psychology Pre-Conference, including schedule, registration, and abstract submission."
+>
+  <section class="max-w-5xl mx-auto px-6 pt-16 pb-10">
+    <div class="rounded-[2rem] border border-navy-100 bg-linear-to-br from-navy-50 via-surface to-navy-100/60 px-8 py-10 shadow-sm">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-navy-500">
+        Political Psychology Pre-Conference
+      </p>
+      <div class="mt-6 grid gap-8 lg:grid-cols-[1.4fr_0.9fr] lg:items-start">
+        <div>
+          <h1 class="max-w-3xl font-serif text-4xl font-bold tracking-tight text-navy-950 sm:text-5xl">
+            {conference.title}
+          </h1>
+          <p class="mt-4 font-serif text-2xl text-navy-700">
+            {conference.theme}
+          </p>
+          <p class="mt-4 max-w-2xl text-lg leading-8 text-navy-700">
+            A focused gathering ahead of the 2026 APSA Annual Meeting for scholars advancing political psychology across subfields, methods, and research contexts.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href={conference.signupUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-surface transition-colors hover:bg-accent-hover"
+            >
+              Conference Registration Form
+            </a>
+            <a
+              href={conference.abstractUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-full border border-navy-300 px-5 py-3 text-sm font-semibold text-navy-700 transition-colors hover:bg-navy-50"
+            >
+              Presentation Abstract Submission Form
+            </a>
+          </div>
+        </div>
+
+        <div class="grid gap-4">
+          <div class="rounded-3xl border border-navy-200 bg-surface p-5 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-navy-500">Date</p>
+            <p class="mt-2 font-serif text-2xl font-semibold text-navy-900">{conference.dateLabel}</p>
+          </div>
+          <div class="rounded-3xl border border-navy-200 bg-surface p-5 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-navy-500">Time</p>
+            <p class="mt-2 font-serif text-2xl font-semibold text-navy-900">{conference.timeLabel}</p>
+          </div>
+          <div class="rounded-3xl border border-navy-200 bg-surface p-5 shadow-sm">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-navy-500">Location</p>
+            <p class="mt-2 font-serif text-2xl font-semibold text-navy-900">{conference.location}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview" class="max-w-5xl mx-auto px-6 py-10">
+    <div class="max-w-3xl space-y-5">
+      <div>
+        <h2 class="font-serif text-3xl font-semibold text-navy-950">
+          Bringing together innovation from across the discipline
+        </h2>
+      </div>
+
+      {conference.description.map((paragraph) => (
+        <p class="text-base leading-8 text-navy-700">{paragraph}</p>
+      ))}
+
+      <p class="text-base leading-8 text-navy-700">
+        This conference will provide a space for scholars making innovative contributions to the expansion of political psychology theory, measurement, and application to connect with political psychologists across subfields for rigorous debate of new ideas. We invite scholars from across the discipline to{" "}
+        <a
+          href={conference.signupUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-bold text-navy-800 underline underline-offset-4 hover:text-navy-950"
+        >
+          register
+        </a>{" "}
+        (for free) for the conference and to{" "}
+        <a
+          href={conference.abstractUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-bold text-navy-800 underline underline-offset-4 hover:text-navy-950"
+        >
+          apply to present
+        </a>{" "}
+        recent work that fits the conference theme.
+      </p>
+
+      <div class="pt-4">
+        <p class="font-serif text-xl italic text-navy-900">We hope to see you there,</p>
+        <p class="mt-6 text-sm font-semibold tracking-[0.04em] text-navy-500">
+          The 2026 APSA Political Psychology Pre-Conference Organizing Committee
+        </p>
+        <div class="mt-4 space-y-1 text-base text-navy-700">
+          <p>Joshua Gubler</p>
+          <p>Ris Swank</p>
+          <p>Alexa Bankert</p>
+          <p>Amanda Friesen</p>
+          <p>Gijs Schumacher</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <div class="space-y-8">
+      <div class="rounded-3xl border border-navy-100 bg-surface p-6 shadow-sm">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-500">Conference format</p>
+        <h2 class="mt-2 font-serif text-2xl font-semibold text-navy-950">What the day will include</h2>
+        <div class="mt-5 space-y-3">
+          {conference.format.map((item) => (
+            <div class="rounded-2xl bg-navy-50 px-4 py-4 text-sm leading-7 text-navy-700">
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-[2rem] bg-navy-900 px-8 py-10 text-navy-50">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-300">Call for proposals</p>
+          <h2 class="mt-2 font-serif text-3xl font-semibold text-white">Presentation submission guidelines</h2>
+          <div class="mt-5 space-y-3">
+            {conference.submissionGuidelines.map((item) => (
+              <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm leading-7 text-navy-100">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-navy-100 bg-surface p-6 shadow-sm">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-500">Deadlines</p>
+        <h2 class="mt-2 font-serif text-2xl font-semibold text-navy-950">Key dates for presenters</h2>
+        <div class="mt-5 space-y-4">
+          {conference.deadlines.map((item) => (
+            <div class="rounded-2xl border border-navy-100 px-4 py-4">
+              <div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
+                <h3 class="text-sm font-semibold uppercase tracking-[0.14em] text-navy-500">{item.label}</h3>
+                <p class="font-serif text-xl font-semibold text-navy-900">{item.value}</p>
+              </div>
+              {item.note && <p class="mt-2 text-sm leading-7 text-navy-600">{item.note}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href={conference.signupUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex min-h-28 w-full max-w-xs items-center justify-center rounded-3xl bg-accent px-6 py-5 text-center text-sm font-semibold text-surface transition-colors hover:bg-accent-hover"
+        >
+          Conference Registration Form
+        </a>
+        <a
+          href={conference.abstractUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex min-h-28 w-full max-w-xs items-center justify-center rounded-3xl border border-navy-300 bg-surface px-6 py-5 text-center text-sm font-semibold text-navy-700 transition-colors hover:bg-navy-50"
+        >
+          Presentation Abstract Submission Form
+        </a>
+      </div>
+
+      <div id="attend" class="rounded-[2rem] bg-navy-900 px-8 py-10 text-navy-50">
+        <div class="grid gap-8">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-300">Who should attend</p>
+            <h2 class="mt-2 font-serif text-3xl font-semibold text-white">Designed for a broad political psychology community</h2>
+            <p class="mt-4 max-w-2xl text-sm leading-7 text-navy-200">
+              Whether you are presenting or simply joining the conversation, this pre-conference is intended to bring together scholars across subfields for discussion, debate, and connection before APSA begins.
+            </p>
+          </div>
+          <div class="space-y-3">
+            {conference.audience.map((item) => (
+              <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm leading-7 text-navy-100">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="max-w-5xl mx-auto px-6 py-10">
+    <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-500">Itinerary</p>
+        <h2 class="mt-2 font-serif text-3xl font-semibold text-navy-950">Draft day-of schedule</h2>
+      </div>
+      <p class="max-w-xl text-sm leading-6 text-navy-500">
+        Schedule to be updated once panels are created.
+      </p>
+    </div>
+
+    <div class="mt-8 grid gap-4">
+      {conference.schedule.map((item) => (
+        <div class="grid gap-3 rounded-3xl border border-navy-100 bg-surface p-5 shadow-sm md:grid-cols-[220px_1fr] md:items-start md:gap-6">
+          <div class="font-serif text-2xl font-semibold whitespace-nowrap text-navy-900">{item.time}</div>
+          <div>
+            <h3 class="text-lg font-semibold text-navy-800">{item.title}</h3>
+            <p class="mt-2 text-sm leading-7 text-navy-600">{item.details}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+</BaseLayout>

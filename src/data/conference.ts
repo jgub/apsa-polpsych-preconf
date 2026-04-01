@@ -19,7 +19,7 @@ export const conference = {
   location: "Harvard University",
   dateLabel: "September 2, 2026",
   timeLabel: "8:30 am Breakfast - 5:45 pm Closing Reception",
-  signupUrl: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=m278xvtRqEi3eZ7lZLQEEyP2jT0i55ZKvIdg4WrBo49UMFM2T0o4UDhPQlFBS0NFRDZQMkM1UkFIMC4u",
+  signupUrl: "https://www.eventbrite.com/e/2026-political-psychology-pre-conference-registration-1986286640812?aff=oddtdtcreator",
   abstractUrl: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=m278xvtRqEi3eZ7lZLQEEyP2jT0i55ZKvIdg4WrBo49URU5BMFFXUFNMWjYxNjlHUkVQWjZLV1hTTS4u",
   signupText: "Use a dedicated registration form for attendees, whether or not they plan to present. This can be a Google Form or Microsoft Form that feeds responses into a spreadsheet for easy tracking.",
   abstractText: "Use a separate proposal form for presenters. This should collect abstracts and presenter details in a spreadsheet you can review as submissions come in.",

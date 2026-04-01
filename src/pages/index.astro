@@ -96,6 +96,10 @@ import { conference } from "../data/conference";
         recent work that fits the conference theme.
       </p>
 
+      <p class="text-sm leading-7 text-navy-600">
+        Registration takes place on Eventbrite. After selecting a ticket, attendees will answer a few short registration questions during Eventbrite checkout before completing the order.
+      </p>
+
       <div class="pt-4">
         <p class="font-serif text-xl italic text-navy-900">We hope to see you there,</p>
         <p class="mt-6 text-sm font-semibold tracking-[0.04em] text-navy-500">
@@ -157,22 +161,29 @@ import { conference } from "../data/conference";
       </div>
 
       <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a
-          href={conference.signupUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex min-h-28 w-full max-w-xs items-center justify-center rounded-3xl bg-accent px-6 py-5 text-center text-sm font-semibold text-surface transition-colors hover:bg-accent-hover"
-        >
-          Conference Registration Form
-        </a>
-        <a
-          href={conference.abstractUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex min-h-28 w-full max-w-xs items-center justify-center rounded-3xl border border-navy-300 bg-surface px-6 py-5 text-center text-sm font-semibold text-navy-700 transition-colors hover:bg-navy-50"
-        >
-          Presentation Abstract Submission Form
-        </a>
+        <div class="w-full max-w-xs">
+          <a
+            href={conference.signupUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex min-h-28 w-full items-center justify-center rounded-3xl bg-accent px-6 py-5 text-center text-sm font-semibold text-surface transition-colors hover:bg-accent-hover"
+          >
+            Register on Eventbrite
+          </a>
+          <p class="mt-3 text-center text-sm leading-6 text-navy-600">
+            {conference.signupText}
+          </p>
+        </div>
+        <div class="w-full max-w-xs">
+          <a
+            href={conference.abstractUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex min-h-28 w-full items-center justify-center rounded-3xl border border-navy-300 bg-surface px-6 py-5 text-center text-sm font-semibold text-navy-700 transition-colors hover:bg-navy-50"
+          >
+            Presentation Abstract Submission Form
+          </a>
+        </div>
       </div>
 
       <div id="attend" class="rounded-[2rem] bg-navy-900 px-8 py-10 text-navy-50">

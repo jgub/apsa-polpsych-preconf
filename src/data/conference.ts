@@ -21,7 +21,7 @@ export const conference = {
   timeLabel: "8:30 am Breakfast - 5:45 pm Closing Reception",
   signupUrl: "https://www.eventbrite.com/e/2026-political-psychology-pre-conference-registration-1986286640812?aff=oddtdtcreator",
   abstractUrl: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=m278xvtRqEi3eZ7lZLQEEyP2jT0i55ZKvIdg4WrBo49URU5BMFFXUFNMWjYxNjlHUkVQWjZLV1hTTS4u",
-  signupText: "Use a dedicated registration form for attendees, whether or not they plan to present. This can be a Google Form or Microsoft Form that feeds responses into a spreadsheet for easy tracking.",
+  signupText: "Register through Eventbrite. After selecting a ticket, attendees will answer a few short registration questions during Eventbrite checkout before completing the order.",
   abstractText: "Use a separate proposal form for presenters. This should collect abstracts and presenter details in a spreadsheet you can review as submissions come in.",
   description: [
     "In increasing numbers, political psychologists now span the traditional subfields of Political Science, producing impactful work in International Relations, Comparative Politics, American Politics, and Theory. This growing diversity - extending even into emerging areas like computational political science - has led scholars to ask fresh questions in new contexts, expanding psychological work well beyond its traditional home in social psychology.",

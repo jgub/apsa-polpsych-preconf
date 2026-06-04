@@ -5,7 +5,7 @@ import { conference } from "../data/conference";
 
 <BaseLayout
   title={`${conference.title} | Harvard University`}
-  description="Conference information for the 2026 APSA Political Psychology Pre-Conference, including schedule, registration, and abstract submission."
+  description="Conference information for the 2026 APSA Political Psychology Pre-Conference, including schedule, registration, and program details."
 >
   <section class="max-w-5xl mx-auto px-6 pt-16 pb-10">
     <div class="rounded-[2rem] border border-navy-100 bg-linear-to-br from-navy-50 via-surface to-navy-100/60 px-8 py-10 shadow-sm">
@@ -33,14 +33,6 @@ import { conference } from "../data/conference";
             >
               Register on Eventbrite
             </a>
-            <a
-              href={conference.abstractUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center rounded-full border border-navy-300 px-5 py-3 text-sm font-semibold text-navy-700 transition-colors hover:bg-navy-50"
-            >
-              Presentation Abstract Submission Form
-            </a>
           </div>
         </div>
 
@@ -62,7 +54,7 @@ import { conference } from "../data/conference";
     </div>
   </section>
 
-  <section id="overview" class="max-w-5xl mx-auto px-6 py-10">
+  <section id="overview" class="max-w-5xl mx-auto px-6 pt-10 pb-4">
     <div class="max-w-3xl space-y-5">
       <div>
         <h2 class="font-serif text-3xl font-semibold text-navy-950">
@@ -84,16 +76,7 @@ import { conference } from "../data/conference";
         >
           register on Eventbrite
         </a>{" "}
-        for the conference and to{" "}
-        <a
-          href={conference.abstractUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="font-bold text-navy-800 underline underline-offset-4 hover:text-navy-950"
-        >
-          apply to present
-        </a>{" "}
-        recent work <strong>by 25 April 2026</strong> that fits the conference theme.
+        and join the conversation before the main APSA meeting begins.
       </p>
 
       <div class="pt-4">
@@ -115,45 +98,55 @@ import { conference } from "../data/conference";
     </div>
   </section>
 
-  <section class="max-w-5xl mx-auto px-6 py-10">
+  <section class="max-w-5xl mx-auto px-6 pt-4 pb-10">
     <div class="space-y-8">
-      <div class="rounded-3xl border border-navy-100 bg-surface p-6 shadow-sm">
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-500">Conference format</p>
-        <h2 class="mt-2 font-serif text-2xl font-semibold text-navy-950">What the day will include</h2>
+      <div class="rounded-[2rem] bg-navy-900 px-8 py-10 text-navy-50">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-300">Conference format</p>
+        <h2 class="mt-2 font-serif text-3xl font-semibold text-navy-50">What the day will include</h2>
         <div class="mt-5 space-y-3">
           {conference.format.map((item) => (
-            <div class="rounded-2xl bg-navy-50 px-4 py-4 text-sm leading-7 text-navy-700">
+            <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm leading-7 text-navy-100">
               {item}
             </div>
           ))}
         </div>
       </div>
 
-      <div class="rounded-[2rem] bg-navy-900 px-8 py-10 text-navy-50">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-300">Call for proposals</p>
-          <h2 class="mt-2 font-serif text-3xl font-semibold text-navy-50">Presentation submission guidelines</h2>
-          <div class="mt-5 space-y-3">
-            {conference.submissionGuidelines.map((item) => (
-              <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm leading-7 text-navy-100">
-                {item}
-              </div>
-            ))}
+      <div id="schedule" class="py-2">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-500">Itinerary</p>
+            <h2 class="mt-2 font-serif text-3xl font-semibold text-navy-950">Conference itinerary</h2>
           </div>
+          <p class="max-w-xl text-sm leading-6 text-navy-500">
+            Finalized schedule for the 2026 APSA Political Psychology Pre-Conference.
+          </p>
         </div>
-      </div>
 
-      <div class="rounded-3xl border border-navy-100 bg-surface p-6 shadow-sm">
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-500">Deadlines</p>
-        <h2 class="mt-2 font-serif text-2xl font-semibold text-navy-950">Key dates for presenters</h2>
-        <div class="mt-5 space-y-4">
-          {conference.deadlines.map((item) => (
-            <div class="rounded-2xl border border-navy-100 px-4 py-4">
-              <div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
-                <h3 class="text-sm font-semibold uppercase tracking-[0.14em] text-navy-500">{item.label}</h3>
-                <p class="font-serif text-xl font-semibold text-navy-900">{item.value}</p>
+        <div class="mt-8 grid gap-4">
+          {conference.schedule.map((item) => (
+            <div class="grid gap-4 rounded-3xl border border-navy-100 bg-surface p-5 shadow-sm md:grid-cols-[220px_1fr] md:items-start md:gap-6">
+              <div class="font-serif text-2xl font-semibold text-navy-900 md:sticky md:top-24">{item.time}</div>
+              <div>
+                <h3 class="text-lg font-semibold text-navy-800">{item.title}</h3>
+                <p class="mt-2 text-sm leading-7 text-navy-600">{item.details}</p>
+                {item.papers && (
+                  <div class="mt-5 grid gap-3">
+                    {item.papers.map((paper) => (
+                      <article class="rounded-2xl border border-navy-100 bg-navy-50/70 px-4 py-4">
+                        <h4 class="font-serif text-lg font-semibold leading-7 text-navy-950">
+                          {paper.title}
+                        </h4>
+                        <p class="mt-2 text-sm leading-6 text-navy-600">
+                          <span class="font-semibold uppercase tracking-[0.12em] text-navy-500">Author(s)</span>
+                          <span class="mx-2 text-navy-300">/</span>
+                          <span>{paper.authors}</span>
+                        </p>
+                      </article>
+                    ))}
+                  </div>
+                )}
               </div>
-              {item.note && <p class="mt-2 text-sm leading-7 text-navy-600">{item.note}</p>}
             </div>
           ))}
         </div>
@@ -170,16 +163,6 @@ import { conference } from "../data/conference";
             Register on Eventbrite
           </a>
         </div>
-        <div class="w-full max-w-xs">
-          <a
-            href={conference.abstractUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex min-h-28 w-full items-center justify-center rounded-3xl border border-navy-300 bg-surface px-6 py-5 text-center text-sm font-semibold text-navy-700 transition-colors hover:bg-navy-50"
-          >
-            Presentation Abstract Submission Form
-          </a>
-        </div>
       </div>
 
       <div id="attend" class="rounded-[2rem] bg-navy-900 px-8 py-10 text-navy-50">
@@ -188,7 +171,7 @@ import { conference } from "../data/conference";
             <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-300">Who should attend</p>
             <h2 class="mt-2 font-serif text-3xl font-semibold text-navy-50">Designed for a broad political psychology community</h2>
             <p class="mt-4 max-w-2xl text-sm leading-7 text-navy-200">
-              Whether you are presenting or simply joining the conversation, this pre-conference is intended to bring together scholars across subfields for discussion, debate, and connection before APSA begins.
+              This pre-conference is intended to bring together scholars across subfields for discussion, debate, and connection before APSA begins.
             </p>
           </div>
           <div class="space-y-3">
@@ -200,30 +183,6 @@ import { conference } from "../data/conference";
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="schedule" class="max-w-5xl mx-auto px-6 py-10">
-    <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-navy-500">Itinerary</p>
-        <h2 class="mt-2 font-serif text-3xl font-semibold text-navy-950">Draft day-of schedule</h2>
-      </div>
-      <p class="max-w-xl text-sm leading-6 text-navy-500">
-        Schedule to be updated once panels are created.
-      </p>
-    </div>
-
-    <div class="mt-8 grid gap-4">
-      {conference.schedule.map((item) => (
-        <div class="grid gap-3 rounded-3xl border border-navy-100 bg-surface p-5 shadow-sm md:grid-cols-[220px_1fr] md:items-start md:gap-6">
-          <div class="font-serif text-2xl font-semibold whitespace-nowrap text-navy-900">{item.time}</div>
-          <div>
-            <h3 class="text-lg font-semibold text-navy-800">{item.title}</h3>
-            <p class="mt-2 text-sm leading-7 text-navy-600">{item.details}</p>
-          </div>
-        </div>
-      ))}
     </div>
   </section>
 

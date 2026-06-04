@@ -10,7 +10,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Official site for the 2026 APSA Political Psychology Pre-Conference, including schedule, registration, and abstract submission details." } = Astro.props;
+const { title, description = "Official site for the 2026 APSA Political Psychology Pre-Conference, including schedule, registration, and program details." } = Astro.props;
 const socialImageUrl = new URL(conference.socialImagePath, conference.siteUrl).toString();
 ---
 

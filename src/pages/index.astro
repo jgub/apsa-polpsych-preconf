@@ -142,6 +142,16 @@ import { conference } from "../data/conference";
                           <span class="mx-2 text-navy-300">/</span>
                           <span>{paper.authors}</span>
                         </p>
+                        {paper.paperUrl && (
+                          <a
+                            href={paper.paperUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-flex items-center rounded-full bg-navy-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
+                          >
+                            Download paper
+                          </a>
+                        )}
                       </article>
                     ))}
                   </div>

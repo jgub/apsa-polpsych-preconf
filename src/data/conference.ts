@@ -1,6 +1,7 @@
 export type PaperItem = {
   title: string;
   authors: string;
+  paperUrl?: string;
 };
 
 export type ScheduleItem = {

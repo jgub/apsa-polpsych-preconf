@@ -55,15 +55,18 @@ export const conference = {
       papers: [
         {
           title: "Bias as Resource: A Psychological Alignment Model of Resilient Knowledge",
-          authors: "Lena Aarøe",
+          authors: "Lene Aarøe",
+          paperUrl: "/papers/bias-as-resource.pdf",
         },
         {
-          title: "G(r)ay Liberals? Symbolic Identity Recognition, Conservative Co-optation, and Political Judgment Among Minoritized Voters",
-          authors: "Alberto López Ortega, Martin Naunov, Stuart J. Turnbull-Dugarte",
+          title: "G(r)ay Liberals: Symbolic Identity Recognition, Conservative Co-optation, and Political Judgment Among Minoritized Voters",
+          authors: "Alberto López Ortega, Martin Naunov, Stuart Turnbull-Dugarte",
+          paperUrl: "/papers/gray-liberals.pdf",
         },
         {
-          title: "Enduring Wounds: State Violence and Conspiracy Thinking in American Politics",
+          title: "Enduring Wounds: Conspiratorial Thinking in American Politics",
           authors: "Franshelly M. Martinez-Ortiz",
+          paperUrl: "/papers/enduring-wounds.pdf",
         },
       ],
     },
@@ -73,16 +76,19 @@ export const conference = {
       details: "Paper presentations and discussion on computational approaches to political psychology.",
       papers: [
         {
-          title: "The Substance of Partisan Affect: Identity, Issues, and the Asymmetric American Voter",
-          authors: "Yujin Julia Jung, Dean Schafer, T. Murat Yildirim, Brandon Beomseob Park",
+          title: "The Politics of What Matters: Parties, Priorities, and Political Judgment",
+          authors: "Yujin Julia Jung, Dean Schafer, Brandon Beomseob Park, Tevfik Murat Yildirim",
+          paperUrl: "/papers/substance-of-partisan-affect.pdf",
         },
         {
           title: "When War Costs Generate Escalatory Demands: Measuring Perceived International Injustice with Machine Learning",
           authors: "Alina Khamatdinova",
+          paperUrl: "/papers/when-war-costs-generate-escalatory-demands.pdf",
         },
         {
           title: "Are Conversations More Persuasive Than Static, One-Way Messages? Experimental Evidence from AI Political Persuasion",
           authors: "Jacques Courbe",
+          paperUrl: "/papers/ai-political-persuasion.pdf",
         },
       ],
     },
@@ -103,15 +109,18 @@ export const conference = {
       papers: [
         {
           title: "Too Damn High! Housing Affordability and Protest Participation",
-          authors: "Deren Onursal, Adam LeGrand Hobbs",
+          authors: "Adam Hobbs, Deren Onursal",
+          paperUrl: "/papers/too-damn-high.pdf",
         },
         {
           title: "Triple Threat: A Lab Experiment of Experienced Threat and Ideology",
-          authors: "Jesse Mehravar, Amanda Friesen, Benjamin Ruisch, Ruben Andre Teixeira Azevedo",
+          authors: "Jesse Mehravar, Amanda Friesen, Beth Landi, Ruben T. Azevedo, Benjamin Ruisch",
+          paperUrl: "/papers/triple-threat.pdf",
         },
         {
-          title: "Asking About Violence: Experimental Evidence from Survey Research in Mexico",
-          authors: "Manuel Moscoso-Rojas, Hannah Baron, Rebecca Leitman, Sandra Ley, Lauren Young",
+          title: "The Effects of Asking about Political Violence on Participant Welfare: Experimental Evidence from Colombia, Mexico, and Nigeria",
+          authors: "Littman, R., Young, L., Baron, H., Blair, G., Granados, D.S., Isah, A., Ley, S., Moscoso-Rojas, M., Moya, A., and Stecher, E.",
+          paperUrl: "/papers/asking-about-violence.pdf",
         },
       ],
     },
@@ -123,14 +132,17 @@ export const conference = {
         {
           title: "The Reservist State: How Geopolitical Rivalry Undermines Women's Representation",
           authors: "Alexis Y. Jang",
+          paperUrl: "/papers/reservist-state.pdf",
         },
         {
-          title: "Political Mental Health is Distinct from Mental Health and Has Unique Political Correlates",
+          title: "Political mental health is distinct from mental health and has unique political correlates",
           authors: "Delaney Peterson, Gijs Schumacher, Frederic R. Hopp, Bert N. Bakker",
+          paperUrl: "/papers/political-mental-health.pdf",
         },
         {
           title: "The Structure of Belief Networks in Mass Publics",
           authors: "Allen Wilson, Connor Choate",
+          paperUrl: "/papers/structure-of-belief-networks.pdf",
         },
       ],
     },

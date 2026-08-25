@@ -135,23 +135,24 @@ import { conference } from "../data/conference";
                     {item.papers.map((paper) => (
                       <article class="rounded-2xl border border-navy-100 bg-navy-50/70 px-4 py-4">
                         <h4 class="font-serif text-lg font-semibold leading-7 text-navy-950">
-                          {paper.title}
+                          {paper.paperUrl ? (
+                            <a
+                              href={paper.paperUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="underline decoration-navy-300 underline-offset-4 transition-colors hover:text-navy-700 hover:decoration-navy-500"
+                            >
+                              {paper.title}
+                            </a>
+                          ) : (
+                            paper.title
+                          )}
                         </h4>
                         <p class="mt-2 text-sm leading-6 text-navy-600">
                           <span class="font-semibold uppercase tracking-[0.12em] text-navy-500">Author(s)</span>
                           <span class="mx-2 text-navy-300">/</span>
                           <span>{paper.authors}</span>
                         </p>
-                        {paper.paperUrl && (
-                          <a
-                            href={paper.paperUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="mt-4 inline-flex items-center rounded-full bg-navy-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-navy-700"
-                          >
-                            Download paper
-                          </a>
-                        )}
                       </article>
                     ))}
                   </div>

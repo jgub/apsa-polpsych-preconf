@@ -138,7 +138,7 @@ export const conference = {
         {
           title: "The Reservist State: How Geopolitical Rivalry Undermines Women's Representation",
           authors: "Alexis Y. Jang",
-          paperUrl: "/papers/reservist-state.pdf",
+          paperUrl: "/papers/reservist-state-updated.pdf",
         },
         {
           title: "Political mental health is distinct from mental health and has unique political correlates",

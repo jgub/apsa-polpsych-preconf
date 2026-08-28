@@ -47,7 +47,33 @@ import { conference } from "../data/conference";
           </div>
           <div class="rounded-3xl border border-navy-200 bg-surface p-5 shadow-sm">
             <p class="text-xs font-semibold uppercase tracking-[0.18em] text-navy-500">Location</p>
-            <p class="mt-2 font-serif text-2xl font-semibold text-navy-900">{conference.location}</p>
+            <div class="mt-3 flex items-start gap-3">
+              <div class="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full bg-navy-100 text-navy-700" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="size-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z" />
+                  <circle cx="12" cy="10" r="2.25" />
+                </svg>
+              </div>
+              <address class="min-w-0 not-italic">
+                <p class="font-serif text-xl font-semibold leading-tight text-navy-900">
+                  {conference.location.institution}
+                </p>
+                <p class="mt-1 text-sm font-semibold text-navy-700">{conference.location.venue}</p>
+                <p class="mt-1 text-sm leading-6 text-navy-600">
+                  {conference.location.street}<br />
+                  {conference.location.city}
+                </p>
+                <a
+                  href={conference.location.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-[0.12em] text-accent transition-colors hover:text-accent-hover"
+                >
+                  View on map
+                  <span aria-hidden="true">&#8599;</span>
+                </a>
+              </address>
+            </div>
           </div>
         </div>
       </div>

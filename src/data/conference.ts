@@ -17,7 +17,13 @@ export const conference = {
   siteUrl: "https://apsa-polpsych-preconf.org",
   socialImagePath: "/social-preview.png",
   theme: "Political Psychology Across the Discipline: New Theory, Methods, Measures, and Applications",
-  location: "Harvard University",
+  location: {
+    institution: "Harvard University",
+    venue: "Ash Center",
+    street: "124 Mt. Auburn St, Suite 2000",
+    city: "Cambridge, MA 02138",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Harvard+University+Ash+Center+124+Mt.+Auburn+St+Suite+2000+Cambridge+MA+02138",
+  },
   dateLabel: "September 2, 2026",
   timeLabel: "8:30 am Breakfast - 5:45 pm Reception",
   signupUrl: "https://www.eventbrite.com/e/2026-political-psychology-pre-conference-registration-1986286640812?aff=oddtdtcreator",
@@ -78,7 +84,7 @@ export const conference = {
         {
           title: "The Politics of What Matters: Parties, Priorities, and Political Judgment",
           authors: "Yujin Julia Jung, Dean Schafer, Brandon Beomseob Park, Tevfik Murat Yildirim",
-          paperUrl: "/papers/substance-of-partisan-affect.pdf",
+          paperUrl: "/papers/substance-of-partisan-affect-updated.pdf",
         },
         {
           title: "When War Costs Generate Escalatory Demands: Measuring Perceived International Injustice with Machine Learning",

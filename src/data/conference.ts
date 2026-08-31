@@ -20,9 +20,9 @@ export const conference = {
   location: {
     institution: "Harvard University",
     venue: "Ash Center",
-    street: "124 Mt. Auburn St, Suite 2000",
+    street: "124 Mt. Auburn St, Suite 200 North",
     city: "Cambridge, MA 02138",
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Harvard+University+Ash+Center+124+Mt.+Auburn+St+Suite+2000+Cambridge+MA+02138",
+    mapUrl: "https://www.google.com/maps/search/?api=1&query=Harvard+University+Ash+Center+124+Mt.+Auburn+St+Suite+200+North+Cambridge+MA+02138",
   },
   dateLabel: "September 2, 2026",
   timeLabel: "8:30 am Breakfast - 5:45 pm Reception",

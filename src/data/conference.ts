@@ -1,7 +1,6 @@
 export type PaperItem = {
   title: string;
   authors: string;
-  paperUrl?: string;
 };
 
 export type ScheduleItem = {
@@ -62,17 +61,14 @@ export const conference = {
         {
           title: "Bias as Resource: A Psychological Alignment Model of Resilient Knowledge",
           authors: "Lene Aarøe",
-          paperUrl: "/papers/bias-as-resource.pdf",
         },
         {
           title: "G(r)ay Liberals: Symbolic Identity Recognition, Conservative Co-optation, and Political Judgment Among Minoritized Voters",
           authors: "Alberto López Ortega, Martin Naunov, Stuart Turnbull-Dugarte",
-          paperUrl: "/papers/gray-liberals.pdf",
         },
         {
           title: "Enduring Wounds: Conspiratorial Thinking in American Politics",
           authors: "Franshelly M. Martinez-Ortiz",
-          paperUrl: "/papers/enduring-wounds.pdf",
         },
       ],
     },
@@ -84,17 +80,14 @@ export const conference = {
         {
           title: "The Politics of What Matters: Parties, Priorities, and Political Judgment",
           authors: "Yujin Julia Jung, Dean Schafer, Brandon Beomseob Park, Tevfik Murat Yildirim",
-          paperUrl: "/papers/substance-of-partisan-affect-updated.pdf",
         },
         {
           title: "When War Costs Generate Escalatory Demands: Measuring Perceived International Injustice with Machine Learning",
           authors: "Alina Khamatdinova",
-          paperUrl: "/papers/when-war-costs-generate-escalatory-demands.pdf",
         },
         {
           title: "Are Conversations More Persuasive Than Static, One-Way Messages? Experimental Evidence from AI Political Persuasion",
           authors: "Jacques Courbe",
-          paperUrl: "/papers/ai-political-persuasion.pdf",
         },
       ],
     },
@@ -116,17 +109,14 @@ export const conference = {
         {
           title: "Too Damn High! Housing Affordability and Protest Participation",
           authors: "Adam Hobbs, Deren Onursal",
-          paperUrl: "/papers/too-damn-high.pdf",
         },
         {
           title: "Triple Threat: A Lab Experiment of Experienced Threat and Ideology",
           authors: "Jesse Mehravar, Amanda Friesen, Beth Landi, Ruben T. Azevedo, Benjamin Ruisch",
-          paperUrl: "/papers/triple-threat.pdf",
         },
         {
           title: "The Effects of Asking about Political Violence on Participant Welfare: Experimental Evidence from Colombia, Mexico, and Nigeria",
           authors: "Littman, R., Young, L., Baron, H., Blair, G., Granados, D.S., Isah, A., Ley, S., Moscoso-Rojas, M., Moya, A., and Stecher, E.",
-          paperUrl: "/papers/asking-about-violence.pdf",
         },
       ],
     },
@@ -138,17 +128,14 @@ export const conference = {
         {
           title: "The Reservist State: How Geopolitical Rivalry Undermines Women's Representation",
           authors: "Alexis Y. Jang",
-          paperUrl: "/papers/reservist-state-updated.pdf",
         },
         {
           title: "Political mental health is distinct from mental health and has unique political correlates",
           authors: "Delaney Peterson, Gijs Schumacher, Frederic R. Hopp, Bert N. Bakker",
-          paperUrl: "/papers/political-mental-health.pdf",
         },
         {
           title: "The Structure of Belief Networks in Mass Publics",
           authors: "Allen Wilson, Connor Choate",
-          paperUrl: "/papers/structure-of-belief-networks.pdf",
         },
       ],
     },
